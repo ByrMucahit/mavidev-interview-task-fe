@@ -1,19 +1,19 @@
 import React, {useState} from "react";
 import {Layout, Typography} from "antd";
+import {ParagraphWrapper} from './module.style'
 
 const { Content } = Layout;
-const { Paragraph, Text } = Typography;
+const { Paragraph } = Typography;
 function ParagraphComp({content}) {
 
-    const [ellipsis, setEllipsis] = useState(true);
-
-
     return (
-        <Content>
-            <Paragraph >
-                {content}
-            </Paragraph>
-        </Content>
+        <ParagraphWrapper>
+            <Content>
+                <Paragraph >
+                    {content}
+                </Paragraph>
+            </Content>
+        </ParagraphWrapper>
     )
 }
 

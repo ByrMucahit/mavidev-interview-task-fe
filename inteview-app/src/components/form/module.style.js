@@ -6,6 +6,7 @@ export const FormWrapper = styled.div`
   }
   
   .ant-form{
-    transform: translateY(80%);
+    transform: translateY(30%);
   }
+  
 `

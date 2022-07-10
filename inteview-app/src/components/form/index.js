@@ -1,9 +1,10 @@
 import React, {useState} from "react";
-import { Button, Form, Input, message } from 'antd';
+import {Button, Form, Input, Layout, message} from 'antd';
 import axios from 'axios';
 import {FormWrapper} from './module.style'
 import 'antd/dist/antd.css';
-
+const {  Footer } = Layout;
+import ButtonComponent from "../button/index";
 
 export  default function FormComponent() {
     const [form] = Form.useForm();
@@ -113,6 +114,10 @@ export  default function FormComponent() {
                             }
                     >Save</Button>
                 </Form.Item>
+                <Footer style={{display:'flex', justifyContent: 'space-around'}}>
+                    <ButtonComponent backgroundColor={"#4A5D6D"} customSize={'small'}  content={'Home'} to={'home'}/>
+                    <ButtonComponent backgroundColor={"#4A5D6D"} customSize={'small'}  content={'Lists'} to={'lists'}/>
+                </Footer>
             </Form>
         </FormWrapper>
     )

@@ -7,19 +7,12 @@ const { Header } = Layout;
 
 const { Text } = Typography;
 
-function HeaderComponent({content}) {
+function HeaderComponent({content, style}) {
     return(
         <HeaderWrapper>
-            <Header style={{backgroundColor:'#4A5D6D', width:'100%'}} >
-                <Image
-                    src="/images/mavidev_logo_light.png"
-                    alt="Picture of the author"
-                    width={146}
-                    height={36}
-                    style={{ marginTop: 5}}
-                 />
-                <Text>
-                    Interview Task
+            <Header style={style} >
+                <Text >
+                    {content}
                 </Text>
                 </Header>
         </HeaderWrapper>

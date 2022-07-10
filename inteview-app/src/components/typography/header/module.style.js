@@ -8,7 +8,12 @@ export const HeaderWrapper = styled.div `
   header {
     height: 100%;
     border-radius: 4px;
+    font-weight: bold;
     
+    span {
+      color: #FFFFFF;
+
+    }
   }
 `;
 
