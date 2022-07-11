@@ -15,14 +15,11 @@ export  default function FormComponent() {
 
 
     const onFormLayoutChange = ({ layout }) => {
-        console.log('city', city);
-        console.log('town', town);
         setFormLayout(layout);
     };
 
     function onGenericChange(title, value) {
-        console.log('title: ', title);
-        console.log('value: ', value);
+
         if(title == "city") {
             setCity(value)
         }
@@ -56,12 +53,10 @@ export  default function FormComponent() {
                     setCity("");
                     message.success(`This Transaction has been done successfully. ${town}/${city} have been added.`)
                 }
-               console.log('r: ', r);
             })
             .catch((e) => {
-
                 message.error(
-                    'Karavan eklenirken bir sorun oluştu. Lütfen daha sonra tekrar deneyin.',
+                    ' City And Town You have tried to added  is already saved.',
                     4
                 );
             });
@@ -114,9 +109,9 @@ export  default function FormComponent() {
                             }
                     >Save</Button>
                 </Form.Item>
-                <Footer style={{display:'flex', justifyContent: 'space-around'}}>
-                    <ButtonComponent backgroundColor={"#4A5D6D"} customSize={'small'}  content={'Home'} to={'home'}/>
-                    <ButtonComponent backgroundColor={"#4A5D6D"} customSize={'small'}  content={'Lists'} to={'lists'}/>
+                <Footer style={{display:'flex', flexDirection:"column"}}>
+                    <ButtonComponent backgroundColor={"#4A5D6D"} customSize={'small'}  content={'Home'} to={''} icon={"home"}/>
+                    <ButtonComponent backgroundColor={"#4A5D6D"} customSize={'small'}  content={'Lists'} to={'lists'} icon={"lists"}/>
                 </Footer>
             </Form>
         </FormWrapper>

@@ -19,8 +19,8 @@ export default function HomeContainer () {
                     <HeaderComponent content={DEFAULT_HEADER} style={{ backgroundColor:'#4A5D6D', width:'100%'}}/>
                     <ParagraphComp content={DEFAULT_TEXT}/>
                     <Footer style={{display:'flex', justifyContent: 'space-around'}}>
-                        <Button backgroundColor={"#4A5D6D"} customSize={'large'}  content={'Adds'} to={'adds'}/>
-                        <Button backgroundColor={"#4A5D6D"} customSize={'large'}  content={'Lists'} to={'lists'}/>
+                        <Button backgroundColor={"#4A5D6D"} customSize={'large'}  content={'Save'} to={'adds'} icon={"save"}/>
+                        <Button backgroundColor={"#4A5D6D"} customSize={'large'}  content={'Listing'} to={'lists'} icon={"lists"}/>
                     </Footer>
                 </Layout>
             </main>
