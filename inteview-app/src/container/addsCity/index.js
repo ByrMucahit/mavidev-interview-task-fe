@@ -36,8 +36,8 @@ export default function AddsCity() {
 
     function save() {
         var masterData = {
-            'cityName': city.toLocaleLowerCase().trim(),
-            'townName': town.toLocaleLowerCase().trim(),
+            'cityName': city?.toLocaleLowerCase().trim(),
+            'townName': town?.toLocaleLowerCase().trim(),
             'countOfPeople': count,
         }
 
@@ -73,6 +73,12 @@ export default function AddsCity() {
                 else if(e.response.data.message == "SAVED_ENTITY_ERROR") {
                     message.error(
                         ' City And Town You have tried to added  is already saved.',
+                        4
+                    );
+                }
+                else {
+                    message.error(
+                        ' Something went wrong. Please fill in the all blanks ,then try again.',
                         4
                     );
                 }
