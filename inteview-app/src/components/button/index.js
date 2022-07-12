@@ -25,14 +25,7 @@ function getIconByName(icon) {
 }
 
 function ButtonComponent ({content, backgroundColor, to, customSize, icon}) {
-    const [size, setSize] = useState(customSize);
-    console.log('icon: ', icon);
-    const basketballPlayer = {
-        name: "James",
-        averagePointsPerGame: 20,
-        height: "6 feet, 2 inches",
-        position: "shooting guard"
-    };
+
     return(
         <>
             <ButtonWrapper>

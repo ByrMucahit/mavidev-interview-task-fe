@@ -5,7 +5,6 @@ import HeaderComponent from "../../components/typography/header";
 import {DEFAULT_HEADER, DEFAULT_TEXT} from "../../../public/constant";
 import ParagraphComp from "../../components/typography/paragragh";
 import Button from "../../components/button";
-import Image from "next/image";
 const {  Footer } = Layout;
 
 
@@ -15,7 +14,7 @@ export default function HomeContainer () {
         <div className={styles.container}>
             <MetaHeader title={"create new app"}/>
             <main className={styles.main} >
-                <Layout style={{maxWidth: 1200}}>
+                <Layout style={{maxWidth: 1200, maxHeight: 600}}>
                     <HeaderComponent content={DEFAULT_HEADER} style={{ backgroundColor:'#4A5D6D', width:'100%'}}/>
                     <ParagraphComp content={DEFAULT_TEXT}/>
                     <Footer style={{display:'flex', justifyContent: 'space-around'}}>

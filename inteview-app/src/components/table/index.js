@@ -16,11 +16,13 @@ import {capitalizeFirstLetter} from '../../../public/constant'
                 <table className={'table-class'}>
                     <tr key={`${iter.cityName}-tr`}>
                         <th>{capitalizeFirstLetter(iter.cityName)}</th>
+                        <th>{'Count'}</th>
                     </tr>
 
                         {iter.towns.map((town) => (
                             <tr key={`${town.townName}-tr`}>
                                 <td key={`${town.townName}-td`}>{capitalizeFirstLetter(town.townName)}</td>
+                                <td key={`${town.countOfPeople}-td`}>{town.countOfPeople}</td>
                             </tr>
                         ))}
 
